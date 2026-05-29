@@ -6,6 +6,8 @@
     "dev:web": "pnpm --filter @workspace/nemotron-chat dev",
     "dev:api": "pnpm --filter @workspace/api-server dev",
     "build:web": "pnpm --filter @workspace/nemotron-chat build",
-    "build:api": "pnpm --filter @workspace/api-server build"
+    "build:api": "pnpm --filter @workspace/api-server build",
+    "typecheck": "pnpm --filter @workspace/nemotron-chat typecheck",
+    "typecheck:api-client": "pnpm --filter @workspace/api-client-react exec tsc -p tsconfig.json --noEmit"
   }
 }

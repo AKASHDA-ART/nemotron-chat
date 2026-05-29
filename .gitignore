@@ -1,5 +1,6 @@
 node_modules/
 dist/
+lib/api-client-react/dist/
 data/
 *.log
 .env
