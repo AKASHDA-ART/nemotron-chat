@@ -8,6 +8,7 @@
     "build:web": "pnpm --filter @workspace/nemotron-chat build",
     "build:api": "pnpm --filter @workspace/api-server build",
     "typecheck": "pnpm --filter @workspace/nemotron-chat typecheck",
-    "typecheck:api-client": "pnpm --filter @workspace/api-client-react exec tsc -p tsconfig.json --noEmit"
+    "typecheck:api-client": "pnpm --filter @workspace/api-client-react exec tsc -p tsconfig.json --noEmit",
+    "sync": "bash scripts/pull-and-install.sh"
   }
 }
