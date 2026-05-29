@@ -214,3 +214,18 @@
     background: hsl(var(--muted-foreground));
   }
 }
+
+@layer components {
+  .prose ul.contains-task-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  .prose li.task-list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .prose li.task-list-item input {
+    margin-top: 0.25rem;
+  }
+}

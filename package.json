@@ -1,0 +1,11 @@
+{
+  "name": "nemotron-chat-monorepo",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "dev:web": "pnpm --filter @workspace/nemotron-chat dev",
+    "dev:api": "pnpm --filter @workspace/api-server dev",
+    "build:web": "pnpm --filter @workspace/nemotron-chat build",
+    "build:api": "pnpm --filter @workspace/api-server build"
+  }
+}

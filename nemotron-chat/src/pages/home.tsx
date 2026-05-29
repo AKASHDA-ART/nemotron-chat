@@ -2,6 +2,7 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import { useQueryClient } from "@tanstack/react-query";
 import { useListMessages, getListMessagesQueryKey, getListSessionsQueryKey } from "@workspace/api-client-react";
 import { SessionSidebar } from "@/components/chat/sidebar";
+import { AssistantMarkdown } from "@/components/chat/assistant-markdown";
 import { Button } from "@/components/ui/button";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Send, Square, ChevronDown, ChevronRight, Loader2, Brain, AlertTriangle, RotateCcw } from "lucide-react";
@@ -80,16 +81,22 @@ function MessageBubble({
         {!isUser && thinkingContent && <ThinkingBlock content={thinkingContent} />}
         <div
           className={cn(
-            "px-3 py-2 text-sm leading-relaxed whitespace-pre-wrap font-mono",
+            "px-3 py-2 text-sm leading-relaxed min-w-0",
             isUser
-              ? "bg-primary text-primary-foreground"
+              ? "whitespace-pre-wrap font-mono bg-primary text-primary-foreground"
               : "bg-card border border-border text-foreground"
           )}
           data-testid={`text-message-content-${role}`}
         >
-          {content}
-          {isStreaming && (
-            <span className="inline-block w-0.5 h-4 bg-current animate-pulse ml-0.5 align-middle" />
+          {isUser ? (
+            <>
+              {content}
+              {isStreaming && (
+                <span className="inline-block w-0.5 h-4 bg-current animate-pulse ml-0.5 align-middle" />
+              )}
+            </>
+          ) : (
+            <AssistantMarkdown content={content} isStreaming={isStreaming} />
           )}
         </div>
       </div>

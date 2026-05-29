@@ -1,0 +1,5 @@
+packages:
+  - "nemotron-chat"
+  - "api-server"
+  - "mockup-sandbox"
+  - "lib/*"
