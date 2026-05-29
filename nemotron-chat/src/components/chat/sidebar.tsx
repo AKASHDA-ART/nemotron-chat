@@ -1,4 +1,4 @@
-import { Session, useListSessions, useCreateSession, useDeleteSession, getListSessionsQueryKey } from "@workspace/api-client-react";
+import { useListSessions, useCreateSession, useDeleteSession, getListSessionsQueryKey } from "@workspace/api-client-react";
 import { useQueryClient } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";

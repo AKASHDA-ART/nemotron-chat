@@ -1,5 +1,5 @@
 import { useState, useRef, useCallback } from "react";
-import { Message } from "@workspace/api-client-react";
+import type { Message } from "@workspace/api-client-react";
 import { useQueryClient } from "@tanstack/react-query";
 import { getListMessagesQueryKey, getListSessionsQueryKey } from "@workspace/api-client-react";
 
